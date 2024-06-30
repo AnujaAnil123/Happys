@@ -15,8 +15,8 @@ const userschema = new mongoose.Schema({
         required:true
     },
     image:{
-        type:String,
-        required:true
+        type:String
+        
     },
     password:{
         type:String,
@@ -24,6 +24,7 @@ const userschema = new mongoose.Schema({
     },
     is_Admin:{
         type:Number,
+        required:true,
         default:0
     },
     is_varified:{

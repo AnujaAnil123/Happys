@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/Happys")
+mongoose.connect("mongodb+srv://happysapparel:happysapparel2024@happys.7skppxm.mongodb.net/?retryWrites=true&w=majority&appName=happys")
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -11,6 +11,8 @@ mongoose.connect("mongodb://127.0.0.1:27017/Happys")
 const express = require("express");
 
 const app = express()
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'))
 
